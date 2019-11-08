@@ -1,0 +1,322 @@
+/* GENERAL STYLES */
+
+:root {
+	/* Sizes */
+	--size-xxs: 0.25rem;
+	--size-xs: 0.5rem;
+	--size-s: 1rem;
+	--size-m: 1.5rem;
+	--size-l: 2rem;
+	--size-xl: 4rem;
+
+	/* Font */
+	--font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+	/* Shadow */
+	--shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+
+	/* Color */
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey: #777;
+	--color-red: #e2071c;
+	--color-green: #2abb17;
+	--color-blue: #5eabed;
+}
+
+@font-face {
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 700;
+}
+
+*,
+html,
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Lucida Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5rem;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 640px) {
+	.container {
+		width: 640px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.container {
+		width: 1024px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	.container {
+		width: 1280px;
+	}
+}
+
+/* Position */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.top-s {
+	top: var(--size-s);
+}
+
+.bottom-s {
+	bottom: var(--size-s);
+}
+
+.right-s {
+	right: var(--size-s);
+}
+
+.left-0 {
+	left: 0;
+}
+
+.left-s {
+	left: var(--size-s);
+}
+
+.-left-s {
+	left: calc(var(--size-s) / -1);
+}
+
+/* Padding */
+.p-xs {
+	padding: var(--size-xs);
+}
+
+.p-s {
+	padding: var(--size-s);
+}
+
+.p-m {
+	padding: var(--size-m);
+}
+
+.p-l {
+	padding: var(--size-l);
+}
+
+.p-xl {
+	padding: var(--size-xl);
+}
+
+.px-s {
+	padding-left: var(--size-s);
+	padding-right: var(--size-s);
+}
+
+.py-xxs {
+	padding-top: var(--size-xxs);
+	padding-bottom: var(--size-xxs);
+}
+
+/* Margin */
+.m-xs {
+	margin: var(--size-xs);
+}
+
+.m-s {
+	margin: var(--size-s);
+}
+
+.m-m {
+	margin: var(--size-m);
+}
+
+.m-l {
+	margin: var(--size-l);
+}
+
+.m-xl {
+	margin: var(--size-xl);
+}
+
+.mx-s {
+	margin-left: var(--size-s);
+	margin-right: var(--size-s);
+}
+
+.-mx-s {
+	margin-left: calc(var(--size-s) / -1);
+	margin-right: calc(var(--size-s) / -1);
+}
+
+.mt-xs {
+	margin-top: var(--size-xs);
+}
+
+.mt-s {
+	margin-top: var(--size-s);
+}
+
+.mb-s {
+	margin-bottom: var(--size-s);
+}
+
+/* Width */
+.w-1-1 {
+	width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+	.s-w-1-1 {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.m-w-1-2 {
+		width: 50%;
+	}
+}
+
+/* Flexbox */
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+/* Border */
+.border-round-xxs {
+	border-radius: var(--size-xxs);
+}
+
+/* Text */
+.text-headline {
+	font-size: calc(var(--size-l) * 0.8);
+}
+
+.text-headline * {
+	font-size: inherit;
+}
+
+.text-caption {
+	font-size: calc(var(--size-s) * 0.8);
+}
+
+.text-caption * {
+	font-size: inherit;
+}
+
+.text-mini {
+	font-size: calc(var(--size-s) * 0.7);
+}
+
+.text-mini * {
+	font-size: inherit;
+}
+
+.text-white {
+	color: var(--color-white);
+}
+
+.text-grey {
+	color: var(--color-grey);
+}
+
+.text-red {
+	color: var(--color-red);
+}
+
+.text-green {
+	color: var(--color-green);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+@media only screen and (min-width(768px)) {
+	.m-text-right {
+		text-align: right;
+	}
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+/* Hyperlink */
+a {
+	text-decoration: none;
+	color: var(--color-black);
+}
+
+a:hover {
+	color: var(--color-blue);
+}
+
+/* COMPONENT STYLES */
+
+/* Card */
+.card {
+	border-radius: var(--size-xxs);
+	box-shadow: var(--shadow);
+}
+
+.card-photo {
+	height: 15rem;
+	border-top-left-radius: var(--size-xxs);
+	border-top-right-radius: var(--size-xxs);
+	/* filter: brightness(0.5); */
+	padding: var(--size-m);
+}
+
+/* Chip */
+.chip {
+	display: inline-block;
+	border-radius: 999px;
+	background-color: #fff;
+	padding: var(--size-xxs) var(--size-xs);
+}
